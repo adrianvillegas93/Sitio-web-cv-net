@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001A49;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.8s;
+    padding: 15px 20px;
+    z-index: 10;
+    background: #3E54AC;
+}
+
+/* La siguiente clase es para usara en JS, al momento de hacer scroll hacia abajo */
+.header.abajo {
+    background: #5826cc;
+    padding: 10px 20px;
+}
+
+.logo {
+    position: relative;
+    /* transition: 1.5s; */
+}
+
+.img_logo {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    transition: 0.8s;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.lista {
+    list-style: none;
+}
+
+.links {
+    position: relative;
+    margin: 0 15px;
+    text-align: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: all 0.25s;
+    text-decoration: none;
+    padding: 0 10px;
+    /* text-align: center; */
+}
+
+/* .links:hover {
+    border-bottom: 0.2em solid #fff;
+} */
+
+
+.links::after {
+    content: "";
+    position: absolute;
+    /* background-color: #1A1C22; */
+    background-color: #001A49;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.links:hover::after {
+    width: 100%;
+}
+
+.nav_menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_close {
+    display: var(--show, none);
+}
+
+/* Lo siguientes es para la imagen principal de esta pagina */
+
+.zona1 {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #9576a88c 0%, #a178bb8c 100% ), url(/img/inicio.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%); */
+}
+
+.zona1_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.zona1_titulo {
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.header.abajo .img_logo {
+    position: relative;
+    width: 110px;
+    height: 50px;
+}
+
+.zona2_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.zona2_boton {
+    background-color: #5826cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 32px;
+    margin-top: 15px;
+}
+
+.zona2_boton:hover {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+
+/*Sigue la otra seccion de puntos de servicio*/
+
+.puntos {
+    background-color: #e5e5f7;
+    padding-top: 60px;
+}
+
+.puntos_subtitulo {
+    font-size: 2.4rem;
+    color: var(--color-title);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.contenedor_puntos {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.comunidades_subtitulo {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+
+
+.container_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_boton {
+    /* background-color: #5826cc; */
+    background-color: #2091F9;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.info_boton:hover {
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.number {
+    display: inline-block;
+    background-image: linear-gradient(to top, #5826cc 0%, #3461c2 100%);
+    width: 10px;
+    height: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.info_parrafo {
+    padding-top: 10px;
+}
+
+
+/*Esta es la parte del boton flotante y el otro formulario*/
+.form {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 50px;
+    /* margin-left: 80px; */
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+
+.form_container {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form_titulo {
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    font-size: 2rem;
+    /* padding-top: 30px; */
+    margin-bottom: .4em;
+}
+
+.form_input {
+    font-family: inherit; /*Esto es para heredar la fuente del contenedor padre*/
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: 0.2em;
+}
+
+.form_input--message {
+    resize: none; /*Para evitar que el textarea cresca a voluntad*/
+    padding: 1.8 1em;
+    margin-bottom: .5em;
+}
+
+.form_cta {
+    font-family: inherit;
+    font-size: 1rem;
+    /* background-color: #089FE0; */
+    /* background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%); */
+    /* background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%); */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    /* font-weight: 300; */
+    padding: .7em 0;
+    border-radius: 0.2em;
+    cursor: pointer;
+    font-weight: 450;
+}
+
+.warnings {
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 10px;
+}
+
+
+.button_F {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+    background: #DA22FF;  
+    background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  
+    background: linear-gradient(to right, #9733EE, #DA22FF); 
+    
+    /* visibility: visible; */
+    /* transition: transform .2s; */
+    
+}
+
+
+.button_img {
+    width: 53px;
+    height: 53px;
+    padding-top: 10px;
+}
+
+.button_F:hover {
+    /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+    background: #396afc;  
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  
+    background: linear-gradient(to right, #2948ff, #396afc); 
+
+}
+
+.form_secundario {
+    position: fixed;
+    width: 85%;
+    max-width: 350px;
+    /* overflow: hidden;
+    margin: 0 auto; */
+    top: 110px;
+    left: 910px;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition: transform .2s;
+    transform: translateY(-200%);
+
+}
+
+.formClose {
+    transform: translateY(-200%);
+}
+
+.formOpen {
+    transform: translateY(0%);
+}
+
+
+.form2 {
+    background-color: #fff;
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    /* margin-left: 80px; */
+    border-radius: 1em;
+    padding: 20px 20px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .9);
+    /* visibility: hidden; */
+}
+
+.buttonC {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+    background: #DA22FF;  
+    background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  
+    background: linear-gradient(to right, #9733EE, #DA22FF); 
+
+    /* visibility: hidden; */
+    /* transition: transform .2s; */
+    transition: transform .2s;
+    transform: translateX(200%);
+}
+
+.buttonC_quitar {
+    transform: translateX(200%);
+}
+
+.buttonC_aparecer {
+    transform: translateX(0%);
+}
+
+.buttonC_img {
+    width: 53px;
+    height: 53px;
+    padding-top: 10px;
+}
+
+
+
+
+/*Metemos toda la parte del footer*/
+
+footer {
+    background-color: #032954;
+    padding-bottom: 0.1px;
+}
+
+.footer_container {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    gap: 3em;
+    
+
+    /* padding: 30px; */
+    /* padding-bottom: 40px; */
+}
+
+.footer_us {
+    width: 40%;
+    color: #fff;
+}
+
+.nombre_us {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* .nombre_us+h3 {
+    font-weight: 500;
+} */
+
+.footer_copyright {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.social_media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social_media_icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social_media_icon i {
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.social_media_icon:hover {
+    background: #fff;
+    color: #0479fe;
+}
+
+.line {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+/* Media queries para diseño responsive */
+
+@media (max-width:800px) {
+    .nav_menu {
+        display: block;
+    }
+
+    .nav--menu {
+        position: fixed;
+        /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+        background: #4776E6;  
+        background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  
+        background: linear-gradient(to right, #8E54E9, #4776E6); 
+        top: 0;
+        right: 0;
+        height: 100%;
+        /* width: 30vw; */
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .ul--show {
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav_close {
+        position: absolute;
+        top: 22px;
+        right: 18px;
+        width: 32px;
+        cursor: pointer;
+    }
+
+    .nav_img {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .zona1_titulo {
+        font-size: 2.3rem;
+    }
+
+
+    .social_media {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social_media_icon {
+        margin-left: 0;
+    }
+
+    .social_media {
+        margin-left: 0;
+    }
+
+    .footer_us {
+        text-align: center;
+        width: 80%;
+    }
+
+    .form_secundario {
+        top: 110px;
+        left: 320px;
+    }
+
+}
+
+/*Esto es para acomodar el formulario*/
+@media (max-width: 700px) {
+    .form_secundario {
+        top: 110px;
+        left: 250px;
+    }
+
+}
+
+@media (max-width: 680px) {
+    .form_secundario {
+        top: 110px;
+        left: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .form_secundario {
+        top: 110px;
+        left: 160px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .nav_close {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 28px;
+        cursor: pointer;
+    }
+
+    .links {
+        font-size: 0.9rem;
+    }
+
+    .zona1_titulo {
+        font-size: 2rem;
+    }
+    
+    .contenedor_puntos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form_secundario {
+        top: 110px;
+        left: 120px;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .form_secundario {
+        top: 110px;
+        left: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form_secundario {
+        top: 110px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .links {
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .nav--menu {
+        width: 50%;
+    }
+
+    .form_secundario {
+        top: 100px;
+        left: 0px;
+    }
+
+    .button_F {
+        bottom: 10px;
+        right: 7px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .button_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttonC {
+        right: 7px;
+        bottom: 80px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .buttonC_img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width:320px) {
+    .links {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:300px) {
+    .form_titulo {
+        font-size: 1.3rem;
+    }
+
+    .warnings {
+        font-size: .8rem;
+        text-align: justify;
+    }
+}
+
+@media (max-width:300px) {
+    .nav--menu {
+        width: 60%;
+    }
+}
