@@ -1088,9 +1088,9 @@ body {
 @media (max-width: 600px) {
     .nav_close {
         position: absolute;
-        top: 6px;
-        right: 6px;
-        width: 28px;
+        top: 10px;
+        right: 10px;
+        width: 30px;
         cursor: pointer;
     }
 
@@ -1202,6 +1202,11 @@ body {
     .buttonC_img {
         width: 40px;
         height: 40px;
+    }
+
+    .form {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
