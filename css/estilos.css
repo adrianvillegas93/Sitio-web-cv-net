@@ -576,6 +576,11 @@ body {
 
 .correo_extra {
     color: #426cdf;
+    text-decoration: none;
+}
+
+.correo_extra:hover {
+    color: #0f39ac;
 }
 
 
@@ -628,7 +633,7 @@ body {
     /* opacity: 0; */
     transition: transform .2s;
     transform: translateY(-200%);
-
+    z-index: 2;
 }
 
 .formClose {
@@ -730,6 +735,11 @@ body {
     /* margin-left: 80px; */
     border-radius: 1em;
     padding: 3.5em 1.5em;
+    /* padding-top: 5em;
+    padding-bottom: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em; */
+    margin-bottom: 105px;
 }
 
 .form_container {
@@ -819,6 +829,36 @@ body {
     padding-bottom: 30px;
 }
 
+.tel {
+    color: #fff;
+    text-decoration: none;
+}
+
+.tel:hover {
+    color: #ffffffc7;
+}
+
+.separador {
+    color: #fff;
+}
+
+.correo_container {
+    padding-top: 5px;
+}
+
+.correo_contact {
+    color: #fff;
+    text-decoration: none;
+}
+
+.correo_contact:hover {
+    color: #ffffffc7;
+}
+
+.contenedor_horarios {
+    margin-top: 25px;
+}
+
 .cont_boton {
     display: flex;
     justify-content: center;
@@ -835,12 +875,17 @@ body {
     width: 150px;
     border-radius: 15px;
     border: none;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     letter-spacing: 1px;
+    /* z-index: 0; */
 }
 
 .show_horarios:hover {
     background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+
+.dia {
+    padding-right: 10px;
 }
 
 .horarios_container {
@@ -848,6 +893,7 @@ body {
     transform: translateX(500%);
     transition: transform .2s ease-in-out;
     width: 170px;
+    /* z-index: 100; */
 }
 
 .horarios_container_show {
@@ -939,6 +985,35 @@ body {
 
 
 /*Sigue la parte de la creacion de media quieries*/
+
+@media (max-width:1200px){
+    .form_secundario {
+        top: 110px;
+        left: 700px;
+    }
+}
+
+@media (max-width:1100px){
+    .form_secundario {
+        top: 110px;
+        left: 600px;
+    }
+}
+
+@media (max-width:1000px){
+    .form_secundario {
+        top: 110px;
+        left: 500px;
+    }
+}
+
+@media (max-width:900px){
+    .form_secundario {
+        top: 110px;
+        left: 400px;
+    }
+}
+
 
 @media (max-width:800px){
     .nav_menu {
@@ -1049,6 +1124,10 @@ body {
         left: 320px;
     }
 
+    .form {
+        margin-bottom: 200px;
+    }
+
 
 }
 
@@ -1108,8 +1187,8 @@ body {
     }
 
     .conoce_container {
-        grid-template-columns: 26px 1fr 26px;
-        gap: .7em;
+        grid-template-columns: 30px 1fr 30px;
+        gap: .6em;
     }
 
     .conoce_arrow {
@@ -1178,7 +1257,7 @@ body {
 
     .form_secundario {
         top: 100px;
-        left: 0px;
+        left: 5px;
     }
 
     .button_F {
@@ -1224,7 +1303,6 @@ body {
         max-width: 200px;
     }
 }
-
 
 
 @media (max-width:320px) {

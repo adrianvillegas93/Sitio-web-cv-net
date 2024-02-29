@@ -39,7 +39,7 @@
 
     <header class="header">
         <div class="logo">
-            <img src="img/logocv.webp" class="img_logo">
+            <img src="img/logocv2.webp" class="img_logo">
         </div>
 
         <nav class="nav">
@@ -48,10 +48,10 @@
                     <a href="#inicio" class="links">Inicio</a>
                 </li>
                 <li class="lista">
-                    <a href="#html/puntosServicios.html" class="links link_letra">Puntos de servicio</a>
+                    <a href="puntosServicios.html" class="links link_letra">Puntos de servicio</a>
                 </li>
                 <li class="lista">
-                    <a href="#html/legal.html" class="links">Legal</a>
+                    <a href="legal.html" class="links">Legal</a>
                 </li>
 
                 <img src="img/close.svg" class="nav_close">
@@ -81,21 +81,21 @@
                 <div class="checklist_servicio">
                     <div class="service">
                         <h3 class="n_service"><span class="number">1</span>Proveedor de servicios de internet</h3>
-                        <div class="servicio_parrafo">
+                        <p class="servicio_parrafo">
                             Somos una empresa de tipo comercial dedicada a ofrecer servicios de internet en el municipio de San Felipe del Progreso, Estado de México.
-                        </div>
+                        </p>
                     </div>
                     <div class="service">
                         <h3 class="n_service"><span class="number">2</span>Venta de equipos de cómputo y red</h3>
-                        <div class="servicio_parrafo">
+                        <p class="servicio_parrafo">
                             Vendemos equipos de cómputo, impresoras, cables de red, discos SSD etc.
-                        </div>
+                        </p>
                     </div>
                     <div class="service">
                         <h3 class="n_service"><span class="number">3</span>Instalación de redes de distribución de internet</h3>
-                        <div class="servicio_parrafo">
+                        <p class="servicio_parrafo">
                             Realizamos instalación completa de internet para tu hogar o negocio.
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
         <section class="gallery" id="galeria">
 
             <div class="gallery_container">
-                <h2 class="gallery_subtitulo">Galeria</h2>
+                <h2 class="gallery_subtitulo">Galería</h2>
 
                 <div class="contenedor_galeria">
                     <img src="img/galeria_1.jpg" alt="" class="img_galeria">
@@ -285,12 +285,12 @@
 
         <section class="payments">
             <h2 class="payments_subtitulo">Formas de Pago</h2>
-            <p class="payments_parrafo">CV-NET maneja las siguientes formas de pago, como tranferencias desde cualquier banco, asi como también depositos en efectivo.</p>
+            <p class="payments_parrafo">CV-NET maneja las siguientes formas de pago, como transferencias desde cualquier banco, y también depósitos en efectivo.</p>
 
             <div class="payments_main">
                 <article class="payments_icons">
                     <img src="img/tarjeta1.svg" class="payments_icon">
-                    <h3 class="payment_titulo">Depositos en OXXO</h3>
+                    <h3 class="payment_titulo">Depósitos en OXXO</h3>
                     <p class="payment_parrafo">Número de tarjeta</p>
                     <p class="payment_clabe">4309674001154790</p>
                 </article>
@@ -311,7 +311,7 @@
             </div>
 
             <div class="payements_info">
-                <p class="info_parrafo1">En concepto o referencia colocar el nombre del ciente. No olivde mandar foto al Whatsapp 7121599989 o 7227615950</p>
+                <p class="info_parrafo1">En concepto o referencia colocar el nombre del cliente. No olvide mandar foto al WhatsApp 7121599989 o 7227615950</p>
                 <div class="boton_wh">
                     <a href="https://api.whatsapp.com/send?phone=7121599989" class="whatsapp_icon" target="_blank">
                         <i class="bx bxl-whatsapp"></i>
@@ -322,7 +322,7 @@
             <div class="info_extra">
                 <p class="extra_parrafo--1">Como siempre sigue a su disposición el pago en los cibers de Santa Ana Nichi y Fresno, ubícanos por el logo.</p>
                 <p class="extra_parrafo">Todas las transferencias a nombre de María Dolores Vilchis Sarmiento.</p>
-                <p class="extra_parrafo">Si requiere factura favor de solicitarla a <span class="correo_extra">info@cv-net.com.mx</span> con sus datos fiscales.</p>
+                <p class="extra_parrafo">Si requiere factura, favor de solicitarla a <a href="mailto:info@cv-net.com.mx" class="correo_extra">info@cv-net.com.mx</a> con sus datos fiscales.</p>
             </div>
             
 
@@ -368,50 +368,103 @@
 
             <div class="form_principal">
 
-                    <form class="form" id="form" action="https://formspree.io/f/mbjeeyev"
-                    method="POST">
+                <form class="form" id="form" action="https://formspree.io/f/mbjeeyev"
+                method="POST">
 
-                        <div class="form_container">
-                        
-                            <h2 class="form_titulo">Contáctanos</h2>
+                    <div class="form_container">
+                    
+                        <h2 class="form_titulo">Contáctanos</h2>
 
-                            <input type="text" class="form_input" placeholder="Nombre:" name="name" id="nombre">
-                            <input type="email" class="form_input" placeholder="Email:" name="email" id="correo">
-                            <textarea class="form_input form_input--message" placeholder="Mensaje:" name="message" id="mensaje"></textarea>
+                        <input type="text" class="form_input" placeholder="Nombre:" name="name" id="nombre">
+                        <input type="email" class="form_input" placeholder="Email:" name="email" id="correo">
+                        <textarea class="form_input form_input--message" placeholder="Mensaje:" name="message" id="mensaje"></textarea>
 
-                            <input type="submit" value="Enviar" class="form_cta" id="entregar">
-                            <p class="warnings" id="warnings"></p>
+                        <input type="submit" value="Enviar" class="form_cta" id="entregar">
+                        <p class="warnings" id="warnings"></p>
+                    </div>
+
+                </form>
+
+                <div class="info_contacto">
+                    <h3 class="info_text">O, aún mejor, ¡ven a visitarnos!</h3>
+                    <p class="info_parrafo">Nos encanta recibir a nuestros clientes, así que ven en cualquier momento durante las horas de oficina.</p>
+                    <h3 class="info_text">CV-NET</h3>
+                    <p class="info_parrafo">Crucero a San Antonio de las Huertas y Fresno Nichi S/N, Santa Ana Nichi, San Felipe del Progreso, C.P. 50686.</p>
+                    <a href="tel:7121599989" class="tel">712 159 9989</a> 
+                    <span class="separador">ó</span>
+                    <a href="tel:7121139964" class="tel">712 113 9964</a>
+
+                    <div class="correo_container">
+                        <a href="mailto:info@cv-net.com.mx" class="correo_contact">info@cv-net.com.mx</a>
+                    </div>
+                    
+
+                    <div class="contenedor_horarios">
+
+                        <div class="cont_boton">
+                            <button class="show_horarios">Ver horarios</button>
                         </div>
 
-                    </form>
+                        <div class="horarios_container" id="open_horarios">
+                            <!-- <p class="lista_horarios">Lun 09:00 - 19:00</p>
+                            <p class="lista_horarios">Mar 09:00 - 19:00</p>
+                            <p class="lista_horarios">Mié 09:00 - 19:00</p>
+                            <p class="lista_horarios">Jue 09:00 - 19:00</p>
+                            <p class="lista_horarios">Vie 09:00 - 19:00</p>
+                            <p class="lista_horarios">Sáb 10:00 - 15:00</p>
+                            <p class="lista_horarios">Dom 10:00 - 15:00</p> -->
 
-                    <div class="info_contacto">
-                        <h3 class="info_text">O, aún mejor, ¡ven a visitarnos!</h3>
-                        <p class="info_parrafo">Nos encanta recibir a nuestros clientes, así que ven en cualquier momento durante las horas de oficina.</p>
-                        <h3 class="info_text">CV-NET</h3>
-                        <p class="info_parrafo">Crucero a San Antonio de las Huertas y Fresno Nichi SN, Santa Ana Nichi, San Felipe del Progreso, C.P. 50686</p>
-                        
-
-                        <div class="contenedor_horarios">
-
-                            <div class="cont_boton">
-                                <button class="show_horarios">Ver Horarios</button>
-                            </div>
-
-                            <div class="horarios_container" id="open_horarios">
-                                <p class="lista_horarios">Lun 09:00 - 19:00</p>
-                                <p class="lista_horarios">Mar 09:00 - 19:00</p>
-                                <p class="lista_horarios">Mié 09:00 - 19:00</p>
-                                <p class="lista_horarios">Jue 09:00 - 19:00</p>
-                                <p class="lista_horarios">Vie 09:00 - 19:00</p>
-                                <p class="lista_horarios">Sáb 10:00 - 15:00</p>
-                                <p class="lista_horarios">Dom 10:00 - 15:00</p>
-                            </div>
+                            <table class="horarios_table">
+                                <tr>
+                                    <td class="dia">Lun</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>19:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Mar</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>19:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Mié</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>19:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Jue</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>19:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Vie</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>19:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Sab</td>
+                                    <td>10:00</td>
+                                    <td>-</td>
+                                    <td>15:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="dia">Dom</td>
+                                    <td>10:00</td>
+                                    <td>-</td>
+                                    <td>15:00</td>
+                                </tr>
+                            </table>
 
                         </div>
-
 
                     </div>
+
+
+                </div>
 
                 
             </div>
